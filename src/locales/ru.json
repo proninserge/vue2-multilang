@@ -1,0 +1,34 @@
+{
+  "menu": {
+      "home": "Главная",
+      "info": "Инфо",
+      "about": "О нас"
+  },
+  "footer": {
+    "text": "Freebie разработано Kishore для Project365.Design"
+  },
+  "article": {
+    "destination-title": "Место",
+    "added-title": "Автор",
+    "view-more-button": "Подробно",
+    "nothing-found": "Ничего не найдено",
+    "back-button": "Назад"
+  },
+  "buttons": {
+      "logout": "Выход"
+  },
+  "pages": {
+      "home": {
+        "header": "Это - главная страница"
+      },
+      "about": {
+        "header": "Это - страница 'О нас'"
+      },
+      "404": {
+        "description": "Страница не найдена",
+        "back-link": "На Главную"
+      }
+  },
+  "search": "Поиск по заголовкам статей",
+  "tooltip": "Меняет отображение карточек"
+}

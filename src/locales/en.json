@@ -1,0 +1,34 @@
+{
+  "menu": {
+    "home": "Home",
+    "info": "Info",
+    "about": "About"
+  },
+  "footer": {
+    "text": "Freebie Designed By Kishore for Project365.Design"
+  },
+  "article": {
+    "destination-title": "Destination",
+    "added-title": "Added by",
+    "view-more-button": "View more",
+    "nothing-found": "Nothing found",
+    "back-button": "Back"
+  },
+  "buttons": {
+    "logout": "Logout"
+  },
+  "pages": {
+    "home": {
+      "header": "This is a home page"
+    },
+    "about": {
+      "header": "This is an about page"
+    },
+    "404": {
+      "description": "Page not found",
+      "back-link": "Back to main"
+    }
+  },
+  "search": "Enter any article title",
+  "tooltip": "Changes the view of articles"
+}
