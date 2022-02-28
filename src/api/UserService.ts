@@ -1,4 +1,5 @@
-import axios, { AxiosResponse } from "axios";
+import axios from "@/api/axios";
+import { AxiosResponse } from "axios";
 
 interface IUser {
   email: string;
@@ -10,7 +11,7 @@ export default class UserService {
     email,
     password,
   }: IUser): Promise<AxiosResponse<IUser>> {
-    return axios.post<IUser>("http://localhost:5000/login", {
+    return axios.post<IUser>("/login", {
       email,
       password,
     });
