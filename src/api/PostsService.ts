@@ -15,9 +15,9 @@ export default class PostsService {
     const response = await axios.get<IPost[]>("/articles");
     return response.data;
   }
-  static async fetchPost(id: number): Promise<IPost | null> {
+  static async fetchPost(id: number): Promise<IPost> {
     const response = await axios.get<IPost[]>("/articles");
     const article = response.data.find((item) => item.id === id);
-    return article ? article : null;
+    return article ? article : ({} as IPost);
   }
 }

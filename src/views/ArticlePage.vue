@@ -1,6 +1,6 @@
 <template>
   <el-row type="flex" justify="center" class="article-page">
-    <el-col :xs="23" :sm="22" :md="20" :lg="16" :xl="16" v-if="content">
+    <el-col :xs="23" :sm="22" :md="20" :lg="16" :xl="16" v-if="content.title">
       <h1>
         {{ content.title }}
       </h1>
@@ -25,7 +25,10 @@
         </el-col>
       </el-row>
     </el-col>
-    <h1 v-else>{{ $t("article.nothing-found") }}</h1>
+    <h1 v-if="!content">{{ $t("article.loading") }}</h1>
+    <h1 v-if="!Object.keys(content).length">
+      {{ $t("article.nothing-found") }}
+    </h1>
   </el-row>
 </template>
 
@@ -42,7 +45,7 @@ export default class ArticlePage extends Vue {
     return this.$route.params.id;
   }
 
-  get content(): IPost | null {
+  get content(): IPost {
     return this.$store.state.articles.currentArticle;
   }
 

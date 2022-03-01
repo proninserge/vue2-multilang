@@ -65,7 +65,7 @@ const actions: ActionTree<IArticlesState, IArticlesState> = {
       const article = await PostsService.fetchPost(id);
       context.commit(mutationTypes.getArticle, article);
     } catch (e) {
-      context.commit(mutationTypes.getArticle, null);
+      context.commit(mutationTypes.getArticle, {} as IPost);
       console.log(e);
     }
   },

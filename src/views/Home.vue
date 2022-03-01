@@ -36,7 +36,10 @@
         :viewMode="viewMode"
       />
     </div>
-    <div v-else>{{ $t("article.nothing-found") }}</div>
+    <div v-if="articles === null">{{ $t("article.loading") }}</div>
+    <div v-if="articles && articles.length === 0">
+      {{ $t("article.nothing-found") }}
+    </div>
   </div>
 </template>
 
