@@ -17,6 +17,7 @@ export const mutationTypes = {
   getArticles: "[articles] getArticles",
   getArticle: "[articles] getArticle",
   setQuery: "[articles] setQuery",
+  setArticleToNull: "[articles] setArticleToNull",
 };
 
 export const actionTypes = {
@@ -37,6 +38,9 @@ const mutations = {
   },
   [mutationTypes.setQuery](state: IArticlesState, payload: string): void {
     state.query = payload;
+  },
+  [mutationTypes.setArticleToNull](state: IArticlesState): void {
+    state.currentArticle = null;
   },
 };
 

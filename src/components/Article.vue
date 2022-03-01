@@ -57,6 +57,7 @@
 
 <script lang="ts">
 import { IPost } from "@/api/PostsService";
+import { mutationTypes } from "@/store/modules/articles";
 import { Vue, Prop, Component } from "vue-property-decorator";
 
 @Component
@@ -76,6 +77,7 @@ export default class Article extends Vue {
   }
 
   viewMore(id: string): void {
+    this.$store.commit(mutationTypes.setArticleToNull);
     this.$router.push({
       name: "Article",
       params: { id },

@@ -1,6 +1,13 @@
 <template>
   <el-row type="flex" justify="center" class="article-page">
-    <el-col :xs="23" :sm="22" :md="20" :lg="16" :xl="16" v-if="content.title">
+    <el-col
+      :xs="23"
+      :sm="22"
+      :md="20"
+      :lg="16"
+      :xl="16"
+      v-if="content !== null && Object.keys(content).length"
+    >
       <h1>
         {{ content.title }}
       </h1>
@@ -26,7 +33,7 @@
       </el-row>
     </el-col>
     <h1 v-if="!content">{{ $t("article.loading") }}</h1>
-    <h1 v-if="!Object.keys(content).length">
+    <h1 v-if="content !== null && !Object.keys(content).length">
       {{ $t("article.nothing-found") }}
     </h1>
   </el-row>
